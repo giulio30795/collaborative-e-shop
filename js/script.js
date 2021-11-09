@@ -145,6 +145,8 @@ active.forEach((card) => {
     toggle.addEventListener('click' , function(){
         descritpionNone.classList.toggle('d-none')
     })
+
+    // Aggiungere prodotti al Carrello e Lista Desideri
     const addCart = card.querySelector('.add_cart')
     addCart.addEventListener('click' , function(){
         cart.innerHTML += `
@@ -155,4 +157,12 @@ active.forEach((card) => {
     });
 })
 
-// Aggiungere prodotti al Carrello e Lista Desideri
+// Aggiungo Bottone acquista nel drop-down del carrello
+
+// Inserisco funzione di pulizia al click
+
+// Creo contatore per prodotti multipli
+
+// preparo somma per il totale dei prodotti acquistati
+
+// Check grafico e ottimizzazione codice
