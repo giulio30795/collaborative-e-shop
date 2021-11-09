@@ -9,9 +9,64 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <div class="container">
+        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+          <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+            <img class="w-100" src="http://boolean.careers/images/misc/logo.png" alt="shop-img">
+          </a>
+
+          <h1 class="col-12 col-md-auto mb-2 justify-content-center mb-md-0 text-uppercase">
+              Charlie Shop
+          </h1>
+
+        <!-- Carrello e Lista Desideri -->
+
+            <div class="col-md-3 justify-content-end d-flex">
+                <div class="dropdown me-2">
+                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    Carrello
+                    </button>
+                    <ul class="dropdown-menu cart" aria-labelledby="dropdownMenuButton1">
+                    </ul>
+                </div>
+
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    Desideri
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <!-- Product Section -->
+        <main class="row card_container">
+            <!-- <div class="col-4 card active_card bg-light">
+                <div class="text-center py-3">
+                    <img src="./img/imac.png" alt="">
+                </div>
+                <div>
+                    <h2 class="title">titolo</h2>
+                    <h3 class="subtitle">sottotitolo</h3>
+                </div>
+                <div class="card_details">
+                    <div class="category">categoria</div>
+                    <p class="card-text description">descrizione
+                    </p>
+                    <div class="price">prezzo</div>
+                    <div class="py-3 d-flex justify-content-between">
+                        <button type="button" class="btn btn-outline-primary me-2 add_dream_list">Aggiungi a Lista Desideri</button>
+                        <button type="button" class="btn btn-outline-primary me-2 add_cart">Aggiungi al Carrello</button>
+                    </div>
+                </div>
+            </div> -->
+        </main>
+    </div>
 
     <!-- Javascript -->
     <script src="./js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
 </body>
 </html>
