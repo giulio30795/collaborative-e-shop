@@ -4,6 +4,9 @@
     object-fit: contain;
 }
 
-.category {
-    
+.category > span {
+    display: inline-block;
+    background-color: lightblue;
+    border-radius: 10px;
+    padding: 5px;
 }

@@ -101,7 +101,7 @@ const products = [
 
 // Targetizzare gli elementi del DOM necessari
 const container = document.querySelector('.card_container');
-
+const cart = document.querySelector('.cart')
 
 // Generare le Card 
 products.forEach((product) =>{
@@ -109,16 +109,18 @@ products.forEach((product) =>{
     container.innerHTML += `
     <div id="${id}" class="col-4 active_card p-2">
         <div class="card bg-light p-2 h-100">
-            <div class="text-center py-3">
-                <img class="w-100 product_img" src="./img/${url}" alt="${title}">
+            <div class="toggle">
+                <div class="text-center py-3">
+                    <img class="w-100 product_img" src="./img/${url}" alt="${title}">
+                </div>
+                <div>
+                    <h2 class="title">${title}</h2>
+                    <h3 class="subtitle">${subtitle}</h3>
+                </div>
             </div>
-            <div>
-                <h2 class="title">${title}</h2>
-                <h3 class="subtitle">${subtitle}</h3>
-            </div>
-            <div class="card_details d-flex flex-column h-100">
+            <div class="card_details d-flex flex-column h-100 d-none">
                 <div class="flex-grow-1 d-flex flex-column justify-content-between">
-                    <div class="category">${category}</div>
+                    <div class="category"><span>${category}</span></div>
                     <p class="card-text description">${description}</p>
                     <div class="price">${price}€</div>
                 </div>
@@ -131,3 +133,26 @@ products.forEach((product) =>{
     </div>
     `;
 });
+
+// Aggiungere funzionalità al Click della card
+const active = document.querySelectorAll('.active_card');
+
+active.forEach((card) => {
+    const descritpionNone = card.querySelector('.card_details');
+    const title = card.querySelector('.title');
+    const toggle = card.querySelector('.toggle');
+
+    toggle.addEventListener('click' , function(){
+        descritpionNone.classList.toggle('d-none')
+    })
+    const addCart = card.querySelector('.add_cart')
+    addCart.addEventListener('click' , function(){
+        cart.innerHTML += `
+        <li class="dropdown-item">
+            ${title.innerHTML}
+        </li>
+        `;
+    });
+})
+
+// Aggiungere prodotti al Carrello e Lista Desideri
